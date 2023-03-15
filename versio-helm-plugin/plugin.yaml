@@ -1,0 +1,16 @@
+name: "versio"
+version: "0.1.1"
+usage: "Handles the version control of the target helm chart."
+description: |-
+  This plugin handles the version control of the target helm chart.
+  Offers the possibility to block versions overwrites as well as to overwrite them or auto increment them.
+command: "$HELM_PLUGIN_DIR/run_macos.sh"
+ignoreFlags: false
+useTunnel: false
+platformCommand:
+- os: linux
+  arch: i386
+  command: "$HELM_PLUGIN_DIR/run_linux.sh"
+- os: linux
+  arch: amd64
+  command: "$HELM_PLUGIN_DIR/run_linux.sh"

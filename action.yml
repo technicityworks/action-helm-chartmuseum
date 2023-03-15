@@ -1,0 +1,13 @@
+name: "TechnicityWorks Helm Chartmuseum Publisher"
+description: GitHub Action for packaging, testing helm charts and publishing to Chartmuseum helm repo'
+branding:
+  icon: archive
+  color: blue
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - run: ${{ github.action_path }}/main.sh
+      shell: bash
