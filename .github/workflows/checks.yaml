@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: arduino/setup-task@v1
+      - uses: arduino/setup-task@v2
       - name: Lint and tests
         run: |
           task test
